@@ -1,0 +1,7 @@
+<apex:page controller="ControlPanelController">
+  <apex:form>
+    <apex:pageBlock title="CommunityInfo">
+       {!AllCommunityInfo}
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

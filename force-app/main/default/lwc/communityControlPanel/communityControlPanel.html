@@ -1,0 +1,23 @@
+<template>
+  <lightning-card title="ApexWireMethodToProperty" icon-name="custom:custom63">
+    <div class="slds-m-around_medium">
+        <template if:true={communitiesWired.data}>
+          <template for:each={communitiesWired.data} for:item="community">
+            <p key={community.Id}>{community.Name} - 
+            {community.Id} - 
+            {community.Status} - 
+            <a onclick={handleActivate} data-id={community.Id}>Activate</a> - 
+            <a onclick={handlePublish} data-id={community.Id}>Publish</a> 
+            <!--<lightning-button variant="brand" label="Activate" title="Activate" onclick={handleActivate} class="slds-m-left_x-small" data-id={community.Id} key={community.Id}></lightning-button>
+            <lightning-button variant="brand" label="Publish" title="Publish" onclick={handlePublish} class="slds-m-left_x-small" data-id={community.Id} key={community.Id}></lightning-button>-->
+          </p>
+          </template> 
+        </template>
+        <template if:true={communitiesWired.error}>
+            Error: {prettyError}
+        </template>
+        <br />Callout Response: {apiResult} <br />
+    </div>
+</lightning-card>
+</template>
+
