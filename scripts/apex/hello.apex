@@ -5,6 +5,19 @@
 // You can also execute the entire file by running the command:
 //     SFDX: Execute Anonymous Apex with Editor Contents
 
-string tempvar = 'Enter_your_name_here';
-System.debug('Hello World!');
-System.debug('My name is ' + tempvar);
+String baseEndpoint='/services/data/v50.0/connect/communities';
+String method = 'GET';
+
+APIInterface.submit(baseEndpoint, method);
+
+String CID = '0DB3B0000004u0TWAQ';
+
+String communityDetailsEndpoint = baseEndpoint + '/' + CID;
+
+APIInterface.submit(communityDetailsEndpoint, method);
+
+String  publishCommunityEndpoint = communityDetailsEndpoint + '/publish';
+
+method = 'POST';
+
+APIInterface.submit(publishCommunityEndpoint,method);

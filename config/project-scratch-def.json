@@ -1,8 +1,11 @@
 {
-  "orgName": "jhaydraude company",
+  "orgName": "ISVTE POC",
   "edition": "Developer",
-  "features": [],
+  "features": ["Communities","Sites","DebugApex","ForceComPlatform"],
   "settings": {
+    "communitiesSettings": {
+      "enableNetworksEnabled": true
+  },
     "lightningExperienceSettings": {
       "enableS1DesktopEnabled": true
     },
